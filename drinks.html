@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<body>
+<link rel="stylesheet" href="cooking.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+
+ <!-------Navigation bar------->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav justify-content-center">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Raft recipes<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cooking.html">Cooking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="drinks.html">Drinks</a>
+        </li>
+      </ul> 
+    </div>
+</nav>
+<!--End of Navigation bar-->
+<p>This is where you can search for how to make recipes. Search for a recipe name on the left, or search for an ingredient name on the right.</p>
+<div class="bg-image" style="background-image: url('images/Background/background2.jpg');"></div>
+<input class="bg-text" type="text" id="nameSearch" onkeyup="myFunction()" placeholder="Name search:" style="top: 15%; background-color: rgba(0, 0, 0, 0.75); width: 20%; left: 25%">
+<input class="bg-text" type="text" id="ingredientSearch" onkeyup="myFunction2()" placeholder="Ingredient search:" style="top: 15%; background-color: rgba(0, 0, 0, 0.75); width: 20%; left: 55%">
+<table class="bg-text" id="myTable" style="top:23%">
+  <tr class="header">
+    <th style="width:70%; color: black;">Recipe</th>
+    <th style="width:30%; color: black">Ingredients</th>
+  </tr>
+  <tr>
+    <td><img src="images/Recipes/Drinks/Coconut_Beat.png" style="max-width: 32px; max-height: 32px;"> Coconut Beat</td>
+    <td>
+      3x 
+      <img src="images/Recipes/Ingredients/Coconut.png" style="max-width: 32px; max-height: 32px;">
+      , 1x 
+      <img src="images/Recipes/Ingredients/Raw_Beet.png" style="max-width: 32px; max-height: 32px;">
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="images/Recipes/Drinks/Mangonana.png" style="max-width: 32px; max-height: 32px;"> Mangonana</td>
+    <td>
+      1x 
+      <img src="images/Recipes/Ingredients/Mango.png" style="max-width: 32px; max-height: 32px;">
+      , 2x 
+      <img src="images/Recipes/Ingredients/Banana.png" style="max-width: 32px; max-height: 32px;">
+      , 1x 
+      <img src="images/Recipes/Ingredients/Bucket_of_Milk.png" style="max-width: 32px; max-height: 32px;">
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="images/Recipes/Drinks/Red_Melon.png" style="max-width: 32px; max-height: 32px;"> Red Melon</td>
+    <td>
+      1x 
+      <img src="images/Recipes/Ingredients/Red_Berries.png" style="max-width: 32px; max-height: 32px;">
+      , 1x 
+      <img src="images/Recipes/Ingredients/Strawberry.png" style="max-width: 32px; max-height: 32px;">
+      , 1x 
+      <img src="images/Recipes/Ingredients/Watermelon.png" style="max-width: 32px; max-height: 32px;">
+      , 1x 
+      <img src="images/Recipes/Ingredients/Coconut.png" style="max-width: 32px; max-height: 32px;">
+    </td>
+  </tr>
+  
+  <tr>
+    <td class="tooltip2">
+      <img src="images/Recipes/Drinks/Redbeet_Shot.png" style="max-width: 32px; max-height: 32px;"> Redbeet shot
+      <span class="tooltiptext2">Adds some extra hearts to your life.</span>
+    </td>
+    <td>
+      2x 
+      <img src="images/Recipes/Ingredients/Raw_Beet.png" style="max-width: 32px; max-height: 32px;">
+      , 1x 
+      <img src="images/Recipes/Ingredients/Coconut.png" style="max-width: 32px; max-height: 32px;">
+      , 1x 
+      <img src="images/Recipes/Ingredients/Turmeric.png" style="max-width: 32px; max-height: 32px;">
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="images/Recipes/Drinks/Silver_Smoothie.png" style="max-width: 32px; max-height: 32px;"> Silver Smoothie</td>
+    <td>
+      1x 
+      <img src="images/Recipes/Ingredients/Banana.png" style="max-width: 32px; max-height: 32px;">
+      , 1x 
+      <img src="images/Recipes/Ingredients/Mango.png" style="max-width: 32px; max-height: 32px;">
+      , 1x 
+      <img src="images/Recipes/Ingredients/Bucket_of_Milk.png" style="max-width: 32px; max-height: 32px;">
+      , 1x 
+      <img src="images/Recipes/Ingredients/Silver_Algae.png" style="max-width: 32px; max-height: 32px;">
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="images/Recipes/Drinks/Simple_Smoothie.png" style="max-width: 32px; max-height: 32px;"> Simple Smoothie</td>
+    <td>
+      1x 
+      <img src="images/Recipes/Ingredients/Mango.png" style="max-width: 32px; max-height: 32px;">
+      , 1x 
+      <img src="images/Recipes/Ingredients/Pineapple.png" style="max-width: 32px; max-height: 32px;">
+      , 2x 
+      <img src="images/Recipes/Ingredients/Coconut.png" style="max-width: 32px; max-height: 32px;">
+      </td>
+  </tr>
+
+  
+  <tr>
+    <td class="tooltip2">
+      <img src="images/Recipes/Drinks/Spicy_Pineberry.png" style="max-width: 32px; max-height: 32px;"> Redbeet shot
+      <span class="tooltiptext2">Makes you swim faster.</span>
+    </td>
+    <td>
+      1x 
+      <img src="images/Recipes/Ingredients/Pineapple.png" style="max-width: 32px; max-height: 32px;">
+      , 2x 
+      <img src="images/Recipes/Ingredients/Strawberry.png" style="max-width: 32px; max-height: 32px;">
+      , 1x 
+      <img src="images/Recipes/Ingredients/Chili.png" style="max-width: 32px; max-height: 32px;">
+      </td>
+  </tr>
+
+  <tr>
+    <td><img src="images/Recipes/Drinks/Strawberry_Colada.png" style="max-width: 32px; max-height: 32px;"> Strawberry Colada</td>
+    <td>
+      1x 
+      <img src="images/Recipes/Ingredients/Pineapple.png" style="max-width: 32px; max-height: 32px;">
+      , 1x 
+      <img src="images/Recipes/Ingredients/Strawberry.png" style="max-width: 32px; max-height: 32px;">
+      , 2x 
+      <img src="images/Recipes/Ingredients/Coconut.png" style="max-width: 32px; max-height: 32px;">
+      </td>
+  </tr>
+
+
+</table>
+<script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("nameSearch");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+            }
+        }
+    }
+    
+    function myFunction2() {
+      // Declare variables
+      var input, filter, table, tr, td, i, txtValue, temp;
+      input = document.getElementById("ingredientSearch");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+            txtValue = td.textContent || td.innerText;
+            
+            temp = td.innerHTML.replaceAll("_"," ");
+            console.log(temp);
+            temp = temp.split("images/");
+            console.log(temp);
+            txtValue = "";
+            for(j=1; j<temp.length; j++)
+            {
+              txtValue = txtValue + temp[j].split(".png")[0] + " ";
+            }
+            console.log(txtValue);
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+            }
+        }
+    }
+    </script>
+</body>
+</html>
